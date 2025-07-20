@@ -63,16 +63,14 @@ router.post("/verify-payment", async (req, res) => {
 const newCandidate = new Candidate({
  serialNo: formData.serialNo,
  name: formData.name.trim(),
- gender: formData.gender,
  college: formData.college,
- course: formData.course,
  year: formData.year, // <- converted to number
- dob: new Date(formData.dob),
  registrationDate: new Date(),
  collegeOrWorking:formData.collegeOrWorking,
  companyName:formData.companyName,
  whatsappNumber: normalizedNumber,
- slot:formData.slot,
+ department:formData.department,
+ hostellerOrdayscholar:formData.hostellerOrdayscholar,
  paymentStatus: "Paid",
  paymentId: razorpay_payment_id,
  orderId: razorpay_order_id,
