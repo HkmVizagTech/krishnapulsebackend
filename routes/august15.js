@@ -11,7 +11,7 @@ const razorpay = new Razorpay({
  key_id: process.env.RAZORPAY_KEY_ID,
  key_secret: process.env.RAZORPAY_KEY_SECRET,
 });
-// Your Mongoose model
+
 // const gupshup = require('./gupshup'); // Assuming you have a wrapper for Gupshup
 // Create Razorpay order
 router.post("/create-order", async (req, res) => {
