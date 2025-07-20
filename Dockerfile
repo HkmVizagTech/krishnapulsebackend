@@ -13,7 +13,7 @@ RUN npm install
 # Copy the rest of the app
 COPY . .
 
-EXPOSE 3300
+EXPOSE 8080
 
 # Start your app
 CMD ["node", "index.js"]
