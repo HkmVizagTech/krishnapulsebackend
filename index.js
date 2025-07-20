@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express=require('express');
 const app=express();
 const db=require('./config/db');
@@ -24,6 +25,8 @@ const ManualAttendance=require('./models/manual')
 const ExcelJS = require('exceljs');
 const Register = require('./routes/register');
 const Response =require('./models/flcUserdata')
+
+
 // const ExcelJS = require('exceljs');
 // const fs = require('fs');
 // const path = require('path');
