@@ -265,7 +265,7 @@ const PORT = process.env.PORT || 8080;
 app.listen(PORT,()=>{
     console.log("siva",PORT);
 })
-// PATCH /:id
+
 app.patch("/:id", async (req, res) => {
   try {
     const { id } = req.params
