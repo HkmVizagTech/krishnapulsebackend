@@ -3,17 +3,16 @@
 const candidateSchema = new mongoose.Schema({
   serialNo: { type: Number },
   name: { type: String,  },
-  gender: { type: String, enum: ['Male', 'Female', 'Other'],  },
   college: { type: String,  },
-  course: { type: String,  },
     companyName: { type: String }, // ✅ NEW (optional, required only for Working)
       collegeOrWorking: { type: String, enum: ['College', 'Working'],  }, 
+            hostellerOrdayscholar: { type: String, enum: ['Hosteller', 'DayScholar'],  }, 
       email: { type: String,  },
   year: { type: String,  },
-  dob: { type: Date },
+  department:{type:String},
   registrationDate: { type: Date, default: Date.now },
   whatsappNumber: { type: String,  required:true},
-  slot:{type:String},
+
 
   // Razorpay payment fields
   paymentStatus: {
