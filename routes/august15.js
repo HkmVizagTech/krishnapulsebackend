@@ -43,6 +43,7 @@ router.post("/verify-payment", async (req, res) => {
    razorpay_signature,
    formData,
  } = req.body;
+ 
 
 
  // Signature Verification
@@ -59,10 +60,11 @@ router.post("/verify-payment", async (req, res) => {
  try {
    const normalizedNumber = "91" + formData.whatsappNumber;
 
-
+console.log(formData)
 const newCandidate = new Candidate({
  serialNo: formData.serialNo,
  name: formData.name.trim(),
+ email: formData.email?.trim(), 
  college: formData.college,
  year: formData.year, // <- converted to number
  registrationDate: new Date(),
