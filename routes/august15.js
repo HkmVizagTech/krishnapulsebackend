@@ -169,22 +169,22 @@ router.post("/mark-attendance", async (req, res) => {
     candidate.attendance = true;
     await candidate.save();
 
-    const message = await gupshup.sendingTextTemplate(
-      {
-        template: {
-          id: '88021e4e-88ae-4cba-bdba-f9b1be3b4948',
-          params: [candidate.name],
-        },
-        'src.name': 'Production',
-        destination: fullNumber,
-        source: '917075176108',
-      },
-      {
-        apikey: 'zbut4tsg1ouor2jks4umy1d92salxm38',
-      }
-    );
+    // const message = await gupshup.sendingTextTemplate(
+    //   {
+    //     template: {
+    //       id: '88021e4e-88ae-4cba-bdba-f9b1be3b4948',
+    //       params: [candidate.name],
+    //     },
+    //     'src.name': 'Production',
+    //     destination: fullNumber,
+    //     source: '917075176108',
+    //   },
+    //   {
+    //     apikey: 'zbut4tsg1ouor2jks4umy1d92salxm38',
+    //   }
+    // );
 
-    console.log(message.data);
+    // console.log(message.data);
 
     res.json({ status: "success", name: candidate.name });
 
